@@ -1,0 +1,165 @@
+body {
+  background-color: rgb(1, 134, 105);
+  font-family: Arial, Helvetica, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.main_div {
+  border: 2px solid black;
+  border-top: none;
+  border-bottom: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: fit-content;
+  padding: 20px;
+  margin-top: 20px;
+}
+.main_div > p {
+  font-size: 2rem;
+  font-family: cursive;
+  letter-spacing: 4px;
+}
+
+.display-list {
+  margin-top: 15px;
+}
+
+.display-list .container {
+  display: flex;
+}
+
+.display-list .container div {
+  width: 200px;
+  padding: 10px 15px;
+  word-wrap: break-word;
+  margin-bottom: 10px;
+}
+.display-list .container div:nth-child(2) {
+  font-weight: bold;
+  text-transform: capitalize;
+  margin-right: 60px;
+}
+.display-list .container div:nth-child(3) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 150px;
+  margin-right: 25px;
+}
+
+.display-list button {
+  margin-bottom: 10px;
+  padding: 0 12px;
+  cursor: pointer;
+  background-color: firebrick;
+  color: rgb(255, 212, 212);
+  border: 1px solid whitesmoke;
+  font-weight: bold;
+}
+.add_button {
+  padding: 11px 20px;
+  cursor: pointer;
+  background-color: green;
+  color: aliceblue;
+  border: 1px solid whitesmoke;
+  font-weight: bold;
+}
+
+.input {
+  width: 200px;
+  padding: 10px 7px;
+  border: 1px solid whitesmoke;
+  outline-color: rgb(4, 177, 177);
+  background-color: darkcyan;
+  color: white;
+}
+.js-input {
+  padding: 11px 15px;
+  caret-color: crimson;
+}
+::placeholder {
+  color: rgb(206, 206, 206);
+}
+
+/**/
+
+input[type="checkbox"] {
+  display: grid;
+  place-content: center;
+  appearance: none;
+  background-color: #fff;
+  margin: 0;
+  font: inherit;
+  width: 1.15em;
+  height: 1.15em;
+  border: 0.15em solid currentColor;
+  border-radius: 0.15em;
+  transform: translateY(55%);
+}
+
+input[type="checkbox"]::before {
+  content: "";
+  width: 0.65em;
+  height: 0.65em;
+  transform: scale(0);
+  transition: 120ms transform ease-in-out;
+  box-shadow: inset 1em 1em rebeccapurple;
+  transform-origin: bottom left;
+  clip-path: polygon(14% 44%, 0 65%, 50% 100%, 100% 16%, 80% 0%, 43% 62%);
+}
+
+input[type="checkbox"]:checked::before {
+  transform: scale(1);
+}
+
+/**/
+@media (max-width: 649px) {
+  .main_div {
+    width: 100%;
+  }
+
+  .contain {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .input {
+    width: 80%;
+  }
+  .js-input-date {
+    padding: 11px 15px;
+  }
+  .add_button {
+    width: 86%;
+  }
+
+  .display-list .container {
+    flex-direction: column;
+    position: relative;
+    border: 1px solid red;
+    margin-bottom: 1rem;
+    padding: 10px;
+  }
+  .checkbox {
+    position: absolute;
+    left: -30px;
+    top: 30%;
+  }
+  .display-list .container div:nth-child(2) {
+    margin-right: 0;
+    text-align: center;
+  }
+  .display-list .container div:nth-child(3) {
+    margin-right: 0;
+    margin-left: 1.2rem;
+  }
+  .display-list button {
+    height: 40px;
+  }
+}
